@@ -7,12 +7,78 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textViewTitle"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_height="19dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"
+        android:text="BMI Calculator"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
+    <TextView
+        android:id="@+id/textViewHeight"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginTop="16dp"
+        android:text="Height : Centimeters"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textViewWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginTop="16dp"
+        android:text="Weight : Kilograms:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextHeightCentimeters"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/editTextHeightCentimeters"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+        android:hint="your height in centimeters"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHeight"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/editTextWeightKilograms"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+        android:hint="your weight in kilograms"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewWeight"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/buttonCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:text="Calculate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextWeightKilograms"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
