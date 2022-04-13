@@ -14,9 +14,25 @@ class MainActivity : AppCompatActivity() {
         buttonCalculate.setOnClickListener {
 
             textViewResult.text = calculatorBodyMassIndex().toString()
+
+            textViewWeightStatus.text = weightStatusResult().toString()
+
         }
 
     }
+
+    private fun weightStatusResult(): String {
+
+        val weightStatusResult =
+            when {
+            calculatorBodyMassIndex() < 18.5 -> "below"
+
+                calculatorBodyMassIndex() > 30 -> "Obese"
+            else -> "Error"
+        }
+        return weightStatusResult
+    }
+
     private fun calculatorBodyMassIndex(): Float {
 
         val editWeight: Float = editTextWeightKilograms.text.toString().toFloat()
